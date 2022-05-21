@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import myapp.views
+import staticapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     # 'url명/' 으로 이런 이름 하에 있는 url은 '앱명.urls'를 통해 앱명/urls.py에서 관리해줄 겁니다.
     path('products/', include('product.urls')),
     path('boards/', include('board.urls')),
+    path('staticapp/', staticapp.views.home),
 ]
